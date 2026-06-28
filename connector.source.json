@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "extensionId": "irodori.firebird",
+  "visibility": "public",
+  "version": "0.1.0",
+  "connector": {
+    "id": "firebird.connector",
+    "engine": "firebird",
+    "label": "Firebird",
+    "aliases": [
+      "firebird",
+      "Firebird"
+    ],
+    "defaultPort": 3050,
+    "wire": "jdbc",
+    "module": "firebird.driver",
+    "features": [
+      "metadata",
+      "sql",
+      "explain"
+    ]
+  },
+  "connection": {
+    "endpoint": {
+      "modes": [
+        "hostPort",
+        "connectionString"
+      ],
+      "defaultPort": 3050,
+      "fields": [
+        {
+          "id": "host",
+          "label": "Host",
+          "type": "string",
+          "profileField": "host",
+          "required": true
+        },
+        {
+          "id": "port",
+          "label": "Port",
+          "type": "number",
+          "profileField": "port",
+          "default": 3050
+        },
+        {
+          "id": "database",
+          "label": "Database",
+          "type": "string",
+          "profileField": "database"
+        }
+      ]
+    },
+    "authMethods": [
+      "none",
+      "connectionString",
+      "srp",
+      "kerberos",
+      "pluginToken",
+      "customDriverOptions"
+    ],
+    "tls": "optional",
+    "transports": "default",
+    "optionNamespaces": [
+      "jdbc",
+      "firebird"
+    ],
+    "customDriverOptions": true
+  },
+  "runtime": {
+    "driverLinked": false
+  },
+  "source": {
+    "knowledgeEngineStatus": "recognized_no_connector",
+    "adapter": null
+  }
+}
