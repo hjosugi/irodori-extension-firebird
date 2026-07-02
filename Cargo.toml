@@ -23,6 +23,7 @@ name = "irodori_extension_firebird"
 crate-type = ["cdylib", "rlib"]
 
 [dependencies]
+firebird-wire = "0.1.6"
 serde_json = "1"
 
 [profile.dev.package."*"]
