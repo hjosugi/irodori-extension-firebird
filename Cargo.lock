@@ -60,9 +60,9 @@ dependencies = [
 
 [[package]]
 name = "firebird-wire"
-version = "0.1.6"
+version = "0.1.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8a0940c0cc1929e3321d6f620255b0a2c24759a8ca875931b247c2cfbb6d9d08"
+checksum = "ec93226a2b515a85a8f4de252153760ccb0638a732f4676369738e3ae90c1154"
 dependencies = [
  "bytes",
  "num-bigint",
@@ -95,10 +95,19 @@ dependencies = [
 ]
 
 [[package]]
+name = "irodori-connector-abi"
+version = "0.6.0"
+source = "git+https://github.com/hjosugi/irodori-kit?tag=v0.6.0#9050f1b8bed78d8ca9efbd1a699730bce2f35ff3"
+dependencies = [
+ "serde_json",
+]
+
+[[package]]
 name = "irodori-extension-firebird"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "firebird-wire",
+ "irodori-connector-abi",
  "serde_json",
 ]
 
